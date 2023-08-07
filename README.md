@@ -1,2 +1,24 @@
-# 23-books
-23 books; Explore the captivating tale of transactions within a category through this enchanting webpage. Experience the ups, downs and surprising turns as numbers come together and navigate their path through the ledger.
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
