@@ -1,0 +1,36 @@
+<div class='sign-up-details'>
+  <%= link_to root_path do %>
+    <%= image_tag 'back.png' %>
+  <% end %>
+  <h2 class='center-text'>Log in</h2>
+</div>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class='form-container'>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit "Log in", class: 'in-out' %>
+    </div>
+  </div>
+<% end %>
+
+<div class='center-text top-gap'>
+  <%= render "devise/shared/links" %>
+</div>
