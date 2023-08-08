@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto+Flex:wght@300;400;500;600;700&family=Roboto+Serif:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger,
+.search {
+  width: 20px;
+}
+
+.cat-title {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.card-main-container {
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.company-date {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.com-icon-container {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.date {
+  font-size: 12px;
+}
+
+.company-icon {
+  margin: 0;
+  width: 60px;
+  height: 60px;
+}
+
+.add-item {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  padding: 3px;
+  background-color: #1a8bf4;
+  outline: 1px solid white;
+  cursor: pointer;
+  border-radius: 50%;
+}
