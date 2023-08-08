@@ -1,1 +1,29 @@
-<h1>categories</h1>
+<div class='categories-container'>
+  <div class='sign-up-details category-header'>
+    <%= image_tag 'hamburger.png', class: 'hamburger' %>
+    <p class='cat-title'>Categories</p>
+    <%= image_tag 'search.png', class: 'search' %>
+  </div>
+  <div class='card-main-container'>
+    <% @categories.each do |category| %>
+      <div class='card-container'>
+        <% if category.present? %>
+          <div class='com-icon-container'>
+            <img class='company-icon' src="<%= category.icon %>" alt='category-icon'></img>
+          </div>
+          <div class='company-date'>
+            <p><%= category.name %></p>
+            <p class='date'><%= category.created_at.strftime('%e %b %Y') %></p>
+          </div>
+          <p>$ 45.00</p>
+        <% else %>
+          <p>Add a category</p>
+        <% end %>
+      </div>
+    <% end %>    
+  </div>
+</div>
+
+<a href="<%= new_category_path %>">
+  <%= image_tag 'add.png', class: 'add-item' %>
+</a>
