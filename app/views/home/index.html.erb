@@ -4,4 +4,5 @@
   <%= image_tag 'main-logo.png', alt: 'logo', class: 'main-logo' %>
   <%= link_to 'Sign up', new_user_registration_path, class: 'sign-up' %>
   <p>Already have an account? <a href='/users/sign_in'>Log in</a></p>
+  <%= button_to 'signout', destroy_user_session_path, method: :delete %>
 </div>
