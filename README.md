@@ -164,6 +164,8 @@ I would like to express my gratitude to the following individuals and organizati
 - [GitHub](https://github.com/): Platform for version control and collaboration
 - [Microverse](https://www.microverse.org/): Global school for remote software developers
 
+A special thanks to [Gregoire Vella](https://www.behance.net/gregoirevella) for the design inspiration
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

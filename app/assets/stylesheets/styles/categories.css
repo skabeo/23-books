@@ -55,15 +55,18 @@ body {
 
 .add-item {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  padding: 3px;
-  background-color: #1a8bf4;
-  outline: 1px solid white;
-  cursor: pointer;
-  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 20px 10px;
+  background-color: rgb(54, 171, 54);
+}
+
+.inner {
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .menu-container {
