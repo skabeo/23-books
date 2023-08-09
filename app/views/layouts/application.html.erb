@@ -12,8 +12,19 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice.present? %>
+      <div class='notice'>
+        <p><%= notice %></p>
+        <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
+      </div>
+    <% end %>
+
+    <% if alert.present? %>
+      <div class='alert'>
+        <p><%= alert %></p>
+        <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

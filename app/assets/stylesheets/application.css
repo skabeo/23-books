@@ -26,6 +26,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  position: relative;
 }
 
 .center-text {
@@ -92,4 +93,36 @@ input:focus,
   border-radius: 50px;
   padding: 10px 0;
   width: 100%;
+}
+
+.notice,
+.alert {
+  position: absolute;
+  top: 8px;
+  width: 100%;
+  padding: 5px 12px;
+  margin-bottom: 16px;
+  border: 1px solid transparent;
+}
+
+.notice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dff0d8;
+  color: #3c763d;
+  border-color: #d6e9c6;
+}
+
+.alert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2dede;
+  color: #a94442;
+  border-color: #ebccd1;
+}
+
+.close-btn {
+  font-size: 40px;
 }
