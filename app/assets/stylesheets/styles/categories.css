@@ -15,11 +15,6 @@ body {
   width: 20px;
 }
 
-.cat-title {
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
 .card-main-container {
   padding: 10px;
   background-color: #f4f4f4;
