@@ -1,25 +1,27 @@
 <div class='categories-container'>
   <div class='sign-up-details category-header'>
     <%= image_tag 'hamburger.png', class: 'hamburger' %>
-    <p class='cat-title'>Categories</p>
+    <h2>Categories</h2>
     <%= image_tag 'search.png', class: 'search' %>
   </div>
   <div class='card-main-container'>
-    <% @categories.each do |category| %>
-      <div class='card-container'>
-        <% if category.present? %>
-          <div class='com-icon-container'>
-            <img class='company-icon' src="<%= category.icon %>" alt='category-icon'></img>
-          </div>
-          <div class='company-date'>
-            <p><%= category.name %></p>
-            <p class='date'><%= category.created_at.strftime('%e %b %Y') %></p>
-          </div>
-          <p>$ 45.00</p>
-        <% else %>
-          <p>Add a category</p>
-        <% end %>
-      </div>
+    <% @categories.each_with_index do |category, index| %>
+      <a href='/categories/<%= category.id %>/details'>
+        <div class='card-container'>
+          <% if category.present? %>
+            <div class='com-icon-container'>
+              <img class='company-icon' src="<%= category.icon %>" alt='category-icon'></img>
+            </div>
+            <div class='company-date'>
+              <p><%= category.name %></p>
+              <p class='date'><%= category.created_at.strftime('%e %b %Y') %></p>
+            </div>
+            <p>$ <%= @total_amount[index] %></p>
+          <% else %>
+            <p>Add a category</p>
+          <% end %>
+        </div>
+      </a>
     <% end %>    
   </div>
 </div>
