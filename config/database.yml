@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: myTracker_production
-  username: myTracker
-  password: <%= ENV["MYTRACKER_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
