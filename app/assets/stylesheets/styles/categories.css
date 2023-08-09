@@ -13,6 +13,7 @@ body {
 .hamburger,
 .search {
   width: 20px;
+  cursor: pointer;
 }
 
 .card-main-container {
@@ -63,4 +64,55 @@ body {
   outline: 1px solid white;
   cursor: pointer;
   border-radius: 50%;
+}
+
+.menu-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+  background-color: #fff;
+  width: 80%;
+  height: 100%;
+}
+
+.close-button-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #1a8bf4;
+}
+
+.close-button {
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.ham-actions {
+  padding: 10px;
+  position: relative;
+  height: 90%;
+}
+
+.in-out2 {
+  background-color: inherit;
+  box-sizing: border-box;
+  font-family: inherit;
+  border: 1px solid red;
+  border-radius: 50px;
+  padding: 10px 0;
+  width: 93%;
+  position: absolute;
+  bottom: 0;
+}
+
+.mb {
+  margin-bottom: 10px;
 }
