@@ -5,27 +5,44 @@
     <%= image_tag 'search.png', class: 'search' %>
   </div>
   <div class='card-main-container'>
-    <% @categories.each_with_index do |category, index| %>
-      <a href='/categories/<%= category.id %>/details'>
-        <div class='card-container'>
-          <% if category.present? %>
-            <div class='com-icon-container'>
-              <img class='company-icon' src="<%= category.icon %>" alt='category-icon'></img>
-            </div>
-            <div class='company-date'>
-              <p><%= category.name %></p>
-              <p class='date'><%= category.created_at.strftime('%e %b %Y') %></p>
-            </div>
-            <p>$ <%= @total_amount[index] %></p>
-          <% else %>
-            <p>Add a category</p>
-          <% end %>
-        </div>
-      </a>
-    <% end %>    
+    <% if @categories.empty? %>
+      <h3 class='center-text'>Add a category</h3>
+    <% else %>
+      <% @categories.each_with_index do |category, index| %>
+        <a href='/categories/<%= category.id %>/details'>
+          <div class='card-container'>
+            <% if category.present? %>
+              <div class='com-icon-container'>
+                <img class='company-icon' src="<%= category.icon %>" alt='category-icon'></img>
+              </div>
+              <div class='company-date'>
+                <p><%= category.name %></p>
+                <p class='date'><%= category.created_at.strftime('%e %b %Y') %></p>
+              </div>
+              <p>$ <%= @total_amount[index] %></p>
+            <% else %>
+              <p>Add a category</p>
+            <% end %>
+          </div>
+        </a>
+      <% end %>  
+    <% end %>   
   </div>
+  <a href="<%= new_category_path %>">
+    <%= image_tag 'add.png', class: 'add-item' %>
+  </a>
 </div>
 
-<a href="<%= new_category_path %>">
-  <%= image_tag 'add.png', class: 'add-item' %>
-</a>
+<div class="menu-container">
+  <div class='modal'>
+    <div class='close-button-container'>
+      <p></p>
+      <span class="close-button">&times;</span>
+    </div>
+    <div class='ham-actions'>
+      <p class='mb'>Signed in as <%= current_user.firstname %> <%= current_user.surname %></p>
+      <%= link_to "Edit Profile", edit_user_registration_path %>
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: 'in-out2' %>
+    </div>
+  </div>
+</div>
